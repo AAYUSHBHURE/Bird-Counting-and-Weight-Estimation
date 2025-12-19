@@ -1,4 +1,4 @@
-# 🐔 Bird Counting and Weight Estimation System
+# Bird Counting and Weight Estimation System
 
 ML-powered FastAPI service for analyzing poultry CCTV footage with real-time bird counting, stable tracking, and weight estimation capabilities.
 
@@ -247,26 +247,3 @@ The Streamlit demo includes 5 sections:
 ## 📄 License
 
 MIT License - See LICENSE file for details
-
-## 👤 Author
-
-**Aayush Bhure**
-
-- GitHub: [@AAYUSHBHURE](https://github.com/AAYUSHBHURE)
-- Project: [Bird-Counting-and-Weight-Estimation](https://github.com/AAYUSHBHURE/Bird-Counting-and-Weight-Estimation)
-
-## 🙏 Acknowledgments
-
-- **YOLOv8**: Ultralytics for object detection
-- **ByteTrack**: For stable multi-object tracking
-- **Supervision**: For tracking utilities and annotations
-- **FastAPI**: For modern API framework
-- **Streamlit**: For interactive demo interface
-
-## 📞 Contact
-
-For questions, issues, or contributions, please open a GitHub issue or contact via GitHub.
-
----
-
-⭐ Star this repository if you find it helpful!
