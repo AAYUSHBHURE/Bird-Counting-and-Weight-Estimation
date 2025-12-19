@@ -1,8 +1,8 @@
-# 🐔 Poultry CCTV Video Analysis System
+#  Poultry CCTV Video Analysis System
 
 ML-powered FastAPI service for analyzing poultry CCTV footage with bird counting, tracking, and weight estimation.
 
-## 🎯 Features
+##  Features
 
 - **Bird Detection**: YOLOv8 pretrained model (COCO class 14: bird)
 - **Stable Tracking**: ByteTrack algorithm with 30-frame persistence
@@ -10,7 +10,7 @@ ML-powered FastAPI service for analyzing poultry CCTV footage with bird counting
 - **Video Annotation**: Bounding boxes with IDs and confidence scores
 - **Interactive Demo**: Streamlit app showcasing all features
 
-## 📋 Requirements
+##  Requirements
 
 ### Mandatory Features Implemented
 
