@@ -19,6 +19,7 @@ ENV/
 # Project specific
 outputs/
 *.mp4
+!Demo_Submission_video.mp4
 *.json
 !demo_output.json
 !demo_results.json
