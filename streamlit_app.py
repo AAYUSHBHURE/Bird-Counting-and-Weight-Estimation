@@ -244,51 +244,23 @@ elif page == "📊 Requirements":
 elif page == "🎬 Demo Video":
     st.markdown('<div class="main-header">🎬 Demo Video Showcase</div>', unsafe_allow_html=True)
     
-    # Use browser-compatible H.264 encoded video
-    demo_video_path = Path(__file__).parent / "demo_browser_compatible.mp4"
-    annotated_video_path = Path(__file__).parent / "outputs" / "e3565aa3" / "tmpbv1l3hsq_annotated.mp4"
+    # Use annotated video with bounding boxes (H.264 encoded for browser)
+    demo_video_path = Path(__file__).parent / "demo_annotated_web.mp4"
     
     if demo_video_path.exists():
         st.markdown("## 📹 Annotated Output Video")
         
         st.markdown("""
-        **What you'll see in the video:**
+        **What you're seeing in the video:**
         - 🔲 Individual bounding boxes around each bird
-        - 🏷️ Labels showing: `ID:X 0.XX W:YYY` (ID, confidence, weight)
+        - 🏷️ Labels showing: `ID:X 0.XX` (Tracking ID, Confidence)
         - 📊 Count overlay at the top
-        - 🎯 Stable weight values (not changing)
-        - ✨ Continuous annotations (no flickering)
+        - ✨ Continuous stable annotations
         """)
         
         # Display annotated video
-        try:
-            with open(demo_video_path, 'rb') as video_file:
-                video_bytes = video_file.read()
-            st.video(video_bytes)
-            st.success(f"✅ Annotated video loaded successfully!")
-        except Exception as e:
-            st.error(f"❌ Error loading video: {e}")
-        
-        st.markdown("### 📥 Download Annotated Video")
-        if annotated_video_path.exists():
-            st.info(f"""
-            **Annotated video location:**  
-            `{annotated_video_path.absolute()}`
-            
-            **To view:** Download and open in VLC Player or Windows Media Player
-            """)
-            
-            try:
-                with open(annotated_video_path, 'rb') as f:
-                    annotated_bytes = f.read()
-                st.download_button(
-                    label="⬇️ Download Annotated Video",
-                    data=annotated_bytes,
-                    file_name="poultry_analysis_annotated.mp4",
-                    mime="video/mp4"
-                )
-            except:
-                pass
+        st.video(str(demo_video_path))
+        st.success(f"✅ Annotated video with bounding boxes loaded!")
         
         if demo_results:
             st.markdown("### 📊 Video Analysis Summary")
