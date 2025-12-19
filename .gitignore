@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+outputs/
+*.mp4
+*.json
+!demo_output.json
+!demo_results.json
+reencode_video.py
+
+# Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Models (large files)
+models/*.pt
+!models/best.pt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+*.cache
