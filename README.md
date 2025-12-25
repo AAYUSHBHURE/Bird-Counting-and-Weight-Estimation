@@ -21,7 +21,8 @@ Advanced ML-powered system for bird counting, tracking, and weight estimation in
 ### Mandatory Requirements ✅
 
 - **🐦 Bird Detection & Counting**
-  - YOLOv8/YOLOv11s object detection
+  - **YOLOv8n** for close-up footage (COCO bird class)
+  - **YOLOv11s** for distant footage (chicken-specific model)
   - Real-time bounding box visualization
   - Count over time tracking
   - Support for both close-up and distant footage
