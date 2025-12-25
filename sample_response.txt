@@ -1,0 +1,44 @@
+{
+  "video_info": {
+    "filename": "2025_12_15_15_24_16_4_dQCiGf.MP4",
+    "duration_seconds": 278.73,
+    "total_frames": 5545,
+    "fps": 19.9,
+    "resolution": "2560x1440"
+  },
+  "count_summary": {
+    "total_unique_birds": 324,
+    "max_simultaneous_count": 187,
+    "average_count": 156.3
+  },
+  "counts_over_time": {
+    "00:00.000": 156,
+    "00:00.150": 158,
+    "00:00.301": 154,
+    "00:00.452": 162,
+    "00:00.603": 159
+  },
+  "weight_estimates": [
+    {
+      "bird_id": 1,
+      "weight_index": 2.45,
+      "uncertainty": 0.37,
+      "sample_count": 42
+    },
+    {
+      "bird_id": 2,
+      "weight_index": 2.67,
+      "uncertainty": 0.41,
+      "sample_count": 38
+    }
+  ],
+  "tracking_metrics": {
+    "total_tracks": 324,
+    "birds_with_weight_data": 312,
+    "frames_processed": 1848
+  },
+  "processing_config": {
+    "model": "YOLOv11s Chicken Detection",
+    "confidence_threshold": 0.35
+  }
+}

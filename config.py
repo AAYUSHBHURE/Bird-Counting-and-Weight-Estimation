@@ -15,8 +15,17 @@ OUTPUTS_DIR.mkdir(exist_ok=True)
 MODEL_CONFIG = {
     "model_path": str(MODELS_DIR / "best.pt"),  # Fine-tuned poultry model
     "default_model": "yolov8n.pt",  # Pretrained COCO model (has bird class)
+    "chicken_model": str(MODELS_DIR / "chicken_yolov11s.pt"),  # YOLOv11s chicken model
     "task": "detect",  # Options: detect, segment
     "imgsz": 640,
+}
+
+# Chicken model configuration (for distant footage)
+CHICKEN_DETECTION_CONFIG = {
+    "conf_thresh": 0.35,  # Optimized for chicken model
+    "iou_thresh": 0.5,
+    "classes": None,  # Chicken model already trained on chickens only
+    "imgsz": 1280,  # Higher resolution for small distant birds
 }
 
 # Detection thresholds
@@ -31,6 +40,14 @@ TRACKING_CONFIG = {
     "track_thresh": 0.5,
     "match_thresh": 0.8,
     "track_buffer": 30,  # Frames to persist lost tracks (Kalman)
+    "frame_rate": 30,
+}
+
+# Distant footage tracking configuration (more lenient for occlusions)
+DISTANT_TRACKING_CONFIG = {
+    "track_activation_threshold": 0.30,
+    "lost_track_buffer": 60,  # Longer buffer for occlusions
+    "minimum_matching_threshold": 0.70,
     "frame_rate": 30,
 }
 
