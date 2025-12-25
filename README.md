@@ -2,6 +2,15 @@
 
 Advanced ML-powered system for bird counting, tracking, and weight estimation in poultry farms using computer vision.
 
+## 🎬 Demo Files (via Git LFS)
+
+- **📹 Annotated Video**: [`outputs/tracked_2025_12_15_15_24_16_4_dQCiGf.mp4`](outputs/tracked_2025_12_15_15_24_16_4_dQCiGf.mp4) (1.9 GB)
+  - Shows Bird #IDs, bounding boxes, count overlays
+- **🤖 Chicken Detection Model**: [`models/chicken_yolov11s.pt`](models/chicken_yolov11s.pt) (19 MB)
+  - YOLOv11s trained on chicken detection
+
+> **Note**: Large files hosted via Git LFS. Clone with `git lfs pull` to download.
+
 ---
 
 ## 📋 Table of Contents
